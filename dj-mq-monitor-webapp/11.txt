@@ -1,0 +1,288 @@
+[INFO] Scanning for projects...
+Downloading: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-base-parent/2.0.1-SNAPSHOT/maven-metadata.xml
+606/606 B               Downloaded: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-base-parent/2.0.1-SNAPSHOT/maven-metadata.xml (606 B at 4.9 KB/sec)
+Downloading: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-base-parent-3th/2.0.1-SNAPSHOT/maven-metadata.xml
+606/606 B               Downloaded: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-base-parent-3th/2.0.1-SNAPSHOT/maven-metadata.xml (606 B at 15.2 KB/sec)
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building dj-mq-monitor-webapp 0.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+Downloading: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-hudong-parent/2.0.0-SNAPSHOT/maven-metadata.xml
+606/606 B               Downloaded: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-hudong-parent/2.0.0-SNAPSHOT/maven-metadata.xml (606 B at 16.4 KB/sec)
+Downloading: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-mq-monitor-api/1.0.1-SNAPSHOT/maven-metadata.xml
+990/990 B               Downloaded: http://dev.dajie-inc.com/nexus/content/groups/public/com/dajie/dj-mq-monitor-api/1.0.1-SNAPSHOT/maven-metadata.xml (990 B at 24.8 KB/sec)
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:tree (default-cli) @ dj-mq-monitor-webapp ---
+[INFO] com.dajie:dj-mq-monitor-webapp:war:0.0.0-SNAPSHOT
+[INFO] +- asm:asm:jar:3.2:provided (scope not updated to compile)
+[INFO] +- org.ow2.asm:asm:jar:5.0.4:compile
+[INFO] +- javassist:javassist:jar:3.11.0.GA:provided (scope not updated to compile)
+[INFO] +- org.javassist:javassist:jar:3.20.0-GA:compile
+[INFO] +- org.springframework:spring-asm:jar:3.0.5.RELEASE:provided
+[INFO] +- com.dajie:dj-framework-log-logback:jar:1.0.11:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.2:compile
+[INFO] |  +- ch.qos.logback:logback-core:jar:1.1.2:compile
+[INFO] |  +- ch.qos.logback:logback-classic:jar:1.1.2:compile
+[INFO] |  +- org.slf4j:log4j-over-slf4j:jar:1.7.7:compile
+[INFO] |  +- org.slf4j:jcl-over-slf4j:jar:1.7.2:compile
+[INFO] |  +- org.slf4j:jul-to-slf4j:jar:1.7.2:compile
+[INFO] |  +- org.apache.commons:commons-lang3:jar:3.1:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.2.1:compile
+[INFO] |  +- com.google.guava:guava:jar:13.0.1:compile
+[INFO] |  +- com.dajie:dj-framework-config-client:jar:1.3.02:compile (version managed from 1.2.06)
+[INFO] |  |  \- com.alibaba:fastjson:jar:1.1.41:compile
+[INFO] |  +- com.dajie:dj-common-zookeeper:jar:1.0.3:compile
+[INFO] |  |  +- org.apache.zookeeper:zookeeper:jar:3.4.0:compile
+[INFO] |  |  |  +- jline:jline:jar:0.9.94:compile
+[INFO] |  |  |  \- org.jboss.netty:netty:jar:3.2.5.Final:compile (version managed from 3.2.2.Final)
+[INFO] |  |  +- net.sf.json-lib:json-lib:jar:jdk15:2.3:compile
+[INFO] |  |  \- junit:junit:jar:4.10:compile
+[INFO] |  |     \- org.hamcrest:hamcrest-core:jar:1.1:compile
+[INFO] |  +- com.netflix.curator:curator-client:jar:1.3.3:compile
+[INFO] |  \- com.netflix.curator:curator-framework:jar:1.3.3:compile
+[INFO] +- log4j:log4j:jar:1.2.17:provided (scope not updated to runtime)
+[INFO] +- log4j:apache-log4j-extras:jar:1.1:provided
+[INFO] +- commons-logging:commons-logging:jar:1.1.1:provided (scope not updated to compile)
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.2:provided (scope not updated to runtime)
+[INFO] +- com.dajie:dj-guanke-api:jar:1.6.14:compile
+[INFO] |  +- com.dajie:dj-common-util:jar:1.5.2:compile
+[INFO] |  |  +- cglib:cglib:jar:2.2.2:compile
+[INFO] |  |  \- com.google.code.gson:gson:jar:1.7.1:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.5.1:compile
+[INFO] |  +- com.dajie:dj-common-cqrs:jar:0.0.08:compile
+[INFO] |  |  \- com.dajie:dj-common-eventbus:jar:0.0.05:compile
+[INFO] |  \- com.dajie:dj-common-bean:jar:1.0.10:compile
+[INFO] +- com.dajie:dj-guanke-client:jar:1.5.5:compile
+[INFO] +- com.dajie:dj-sms-client:jar:1.0.4:compile
+[INFO] |  \- com.dajie:dj-sms-api:jar:1.0.4:compile (version managed from 1.0.3)
+[INFO] +- com.dajie:dj-guanke-model:jar:1.4.1:compile
+[INFO] +- javax.servlet:servlet-api:jar:2.5:compile
+[INFO] +- org.springframework:spring-beans:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-context:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-web:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:4.2.0.RELEASE:compile
+[INFO] +- org.springframework:spring-tx:jar:4.2.0.RELEASE:compile
+[INFO] +- com.dajie:dj-profile-api:jar:1.2.2:compile
+[INFO] |  +- com.dajie:dj-infra-encrypt-util:jar:2.0.0:compile
+[INFO] |  +- com.dajie:dj-infra-encrypt-codec:jar:2.0.0:compile
+[INFO] |  \- commons-codec:commons-codec:jar:1.6:compile
+[INFO] +- com.dajie:dj-profile-queue:jar:1.1.1:compile
+[INFO] |  \- com.dajie:dj-common-queue:jar:1.2.09:compile
+[INFO] |     +- com.dajie:dj-framework-config-rabbit:jar:1.0.00:compile
+[INFO] |     +- com.alibaba.rocketmq:rocketmq-client:jar:3.2.2.u1:compile
+[INFO] |     |  +- com.alibaba.rocketmq:rocketmq-common:jar:3.2.2:compile
+[INFO] |     |  \- com.alibaba.rocketmq:rocketmq-remoting:jar:3.2.2:compile
+[INFO] |     |     \- io.netty:netty-all:jar:4.0.23.Final:compile
+[INFO] |     \- com.dajie:dj-framework-mq-monitor:jar:0.0.0:compile
+[INFO] |        +- org.apache.curator:curator-recipes:jar:2.8.0:compile
+[INFO] |        \- org.apache.curator:curator-framework:jar:2.8.0:compile
+[INFO] |           \- org.apache.curator:curator-client:jar:2.8.0:compile
+[INFO] +- com.dajie:dj-profile-client:jar:1.1.10:compile
+[INFO] |  +- com.dajie:dj-common-config:jar:3.0.03:compile
+[INFO] |  |  +- commons-beanutils:commons-beanutils:jar:1.8.3:compile
+[INFO] |  |  +- net.sf.ezmorph:ezmorph:jar:1.0.6:compile
+[INFO] |  |  \- net.sf.json:JSONObject:jar:2.3:compile
+[INFO] |  +- com.dajie:dj-common-dubbo:jar:2.01.01:compile
+[INFO] |  |  +- com.alibaba:dubbo:jar:2.5.3:compile
+[INFO] |  |  +- org.aspectj:aspectjrt:jar:1.7.2:compile
+[INFO] |  |  \- org.aspectj:aspectjweaver:jar:1.7.2:compile
+[INFO] |  \- com.github.sgroschupf:zkclient:jar:0.1:compile
+[INFO] +- org.springframework:spring-aop:jar:4.2.0.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-expression:jar:4.2.0.RELEASE:compile
+[INFO] +- com.dajie:dj-recruit-api:jar:1.0.28:compile
+[INFO] +- com.dajie:dj-recruit-client:jar:1.0.13:compile
+[INFO] +- com.dajie:dj-base-webapp:jar:3.9.02:compile
+[INFO] |  +- com.dajie:dj-search-client:jar:2.2.39:compile
+[INFO] |  |  +- com.dajie:dj-search-core:jar:2.1.34:compile
+[INFO] |  |  +- net.sf.ehcache:ehcache-core:jar:2.4.6:compile (version managed from 2.6.0)
+[INFO] |  |  +- com.thoughtworks.xstream:xstream:jar:1.4.2:compile
+[INFO] |  |  +- commons-pool:commons-pool:jar:1.5.6:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpclient:jar:4.2.2:compile
+[INFO] |  |  |  \- org.apache.httpcomponents:httpcore:jar:4.2.2:compile
+[INFO] |  |  +- redis.clients:jedis:jar:2.8.0:compile
+[INFO] |  |  +- xmlpull:xmlpull:jar:1.1.3.1:compile
+[INFO] |  |  +- xpp3:xpp3_min:jar:1.1.4c:compile
+[INFO] |  |  +- org.apache.lucene:lucene-core:jar:3.0.0:compile
+[INFO] |  |  +- org.apache.thrift:libthrift:jar:0.9.0:compile
+[INFO] |  |  \- com.dajie:dj-indexer-resume-common:jar:0.0.1:compile
+[INFO] |  |     +- org.apache.hbase:hbase-client:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  +- org.apache.hbase:hbase-protocol:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  +- com.google.protobuf:protobuf-java:jar:2.5.0:compile
+[INFO] |  |     |  +- io.netty:netty:jar:3.6.6.Final:compile
+[INFO] |  |     |  +- org.cloudera.htrace:htrace-core:jar:2.04:compile
+[INFO] |  |     |  |  \- org.mortbay.jetty:jetty-util:jar:6.1.26:compile
+[INFO] |  |     |  +- org.apache.hadoop:hadoop-common:jar:2.2.0:compile
+[INFO] |  |     |  |  +- xmlenc:xmlenc:jar:0.52:compile
+[INFO] |  |     |  |  +- commons-net:commons-net:jar:3.1:compile
+[INFO] |  |     |  |  +- org.mortbay.jetty:jetty:jar:6.1.26:compile
+[INFO] |  |     |  |  +- com.sun.jersey:jersey-core:jar:1.15:compile (version managed from 1.9)
+[INFO] |  |     |  |  +- com.sun.jersey:jersey-json:jar:1.15:compile (version managed from 1.9)
+[INFO] |  |     |  |  |  +- com.sun.xml.bind:jaxb-impl:jar:2.2.3-1:compile
+[INFO] |  |     |  |  |  \- org.codehaus.jackson:jackson-xc:jar:1.9.2:compile
+[INFO] |  |     |  |  +- commons-el:commons-el:jar:1.0:runtime
+[INFO] |  |     |  |  +- net.java.dev.jets3t:jets3t:jar:0.6.1:compile
+[INFO] |  |     |  |  +- commons-configuration:commons-configuration:jar:1.6:compile
+[INFO] |  |     |  |  |  +- commons-digester:commons-digester:jar:1.8:compile
+[INFO] |  |     |  |  |  \- commons-beanutils:commons-beanutils-core:jar:1.8.0:compile
+[INFO] |  |     |  |  +- org.apache.avro:avro:jar:1.7.4:compile
+[INFO] |  |     |  |  |  +- com.thoughtworks.paranamer:paranamer:jar:2.3:compile
+[INFO] |  |     |  |  |  \- org.xerial.snappy:snappy-java:jar:1.0.4.1:compile
+[INFO] |  |     |  |  +- com.jcraft:jsch:jar:0.1.42:compile
+[INFO] |  |     |  |  \- org.apache.commons:commons-compress:jar:1.4.1:compile
+[INFO] |  |     |  |     \- org.tukaani:xz:jar:1.0:compile
+[INFO] |  |     |  +- org.apache.hadoop:hadoop-auth:jar:2.2.0:compile
+[INFO] |  |     |  +- org.apache.hadoop:hadoop-mapreduce-client-core:jar:2.2.0:compile
+[INFO] |  |     |  |  +- org.apache.hadoop:hadoop-yarn-common:jar:2.2.0:compile
+[INFO] |  |     |  |  |  +- org.apache.hadoop:hadoop-yarn-api:jar:2.2.0:compile
+[INFO] |  |     |  |  |  \- com.sun.jersey.contribs:jersey-guice:jar:1.9:compile
+[INFO] |  |     |  |  |     \- javax.inject:javax.inject:jar:1:compile
+[INFO] |  |     |  |  \- com.google.inject.extensions:guice-servlet:jar:3.0:compile
+[INFO] |  |     |  +- org.apache.hadoop:hadoop-annotations:jar:2.2.0:compile
+[INFO] |  |     |  |  \- jdk.tools:jdk.tools:jar:1.6:system
+[INFO] |  |     |  \- com.github.stephenc.findbugs:findbugs-annotations:jar:1.3.9-1:compile
+[INFO] |  |     +- org.apache.hbase:hbase-common:jar:0.96.2-hadoop2:compile
+[INFO] |  |     +- org.apache.hbase:hbase-hadoop2-compat:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  +- org.apache.hbase:hbase-hadoop-compat:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  \- com.yammer.metrics:metrics-core:jar:2.1.2:compile
+[INFO] |  |     +- org.apache.hbase:hbase-it:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  +- org.apache.hbase:hbase-shell:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  |  +- org.apache.hbase:hbase-prefix-tree:jar:0.96.2-hadoop2:runtime
+[INFO] |  |     |  |  +- org.jruby:jruby-complete:jar:1.6.8:compile
+[INFO] |  |     |  |  +- org.apache.hadoop:hadoop-client:jar:2.2.0:compile
+[INFO] |  |     |  |  |  +- org.apache.hadoop:hadoop-mapreduce-client-app:jar:2.2.0:compile
+[INFO] |  |     |  |  |  \- org.apache.hadoop:hadoop-mapreduce-client-jobclient:jar:2.2.0:compile
+[INFO] |  |     |  |  +- org.apache.hadoop:hadoop-hdfs:jar:2.2.0:compile
+[INFO] |  |     |  |  |  \- commons-daemon:commons-daemon:jar:1.0.13:compile
+[INFO] |  |     |  |  \- org.apache.hadoop:hadoop-hdfs:test-jar:tests:2.2.0:compile
+[INFO] |  |     |  +- org.apache.hbase:hbase-server:jar:0.96.2-hadoop2:compile
+[INFO] |  |     |  |  +- org.mortbay.jetty:jetty-sslengine:jar:6.1.26:compile
+[INFO] |  |     |  |  +- org.mortbay.jetty:servlet-api-2.5:jar:6.1.14:compile
+[INFO] |  |     |  |  +- org.codehaus.jackson:jackson-jaxrs:jar:1.8.8:compile
+[INFO] |  |     |  |  +- org.jamon:jamon-runtime:jar:2.3.1:compile
+[INFO] |  |     |  |  +- com.sun.jersey:jersey-server:jar:1.15:compile
+[INFO] |  |     |  |  \- javax.xml.bind:jaxb-api:jar:2.2.2:compile
+[INFO] |  |     |  |     \- javax.activation:activation:jar:1.1.1:compile (version managed from 1.1)
+[INFO] |  |     |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  |     |  +- org.apache.commons:commons-math:jar:2.1:compile
+[INFO] |  |     |  \- org.apache.hadoop:hadoop-mapreduce-client-jobclient:test-jar:tests:2.2.0:compile
+[INFO] |  |     |     +- org.apache.hadoop:hadoop-mapreduce-client-common:jar:2.2.0:compile
+[INFO] |  |     |     |  +- org.apache.hadoop:hadoop-yarn-client:jar:2.2.0:compile
+[INFO] |  |     |     |  |  \- com.sun.jersey.jersey-test-framework:jersey-test-framework-grizzly2:jar:1.15:compile (version managed from 1.9)
+[INFO] |  |     |     |  |     +- com.sun.jersey.jersey-test-framework:jersey-test-framework-core:jar:1.15:compile
+[INFO] |  |     |     |  |     |  +- javax.servlet:javax.servlet-api:jar:3.0.1:compile
+[INFO] |  |     |     |  |     |  +- com.sun.jersey:jersey-servlet:jar:1.15:compile
+[INFO] |  |     |     |  |     |  \- com.sun.jersey:jersey-client:jar:1.15:compile
+[INFO] |  |     |     |  |     \- com.sun.jersey:jersey-grizzly2-servlet:jar:1.15:compile
+[INFO] |  |     |     |  |        +- org.glassfish.grizzly:grizzly-http-servlet:jar:2.2.16:compile
+[INFO] |  |     |     |  |        |  \- org.glassfish.grizzly:grizzly-http-server:jar:2.2.16:compile
+[INFO] |  |     |     |  |        |     \- org.glassfish.grizzly:grizzly-rcm:jar:2.2.16:compile
+[INFO] |  |     |     |  |        +- com.sun.jersey:jersey-grizzly2:jar:1.15:compile
+[INFO] |  |     |     |  |        |  \- org.glassfish.grizzly:grizzly-http:jar:2.2.16:compile
+[INFO] |  |     |     |  |        |     \- org.glassfish.grizzly:grizzly-framework:jar:2.2.16:compile
+[INFO] |  |     |     |  |        \- org.glassfish:javax.servlet:jar:3.1:compile
+[INFO] |  |     |     |  \- org.apache.hadoop:hadoop-yarn-server-common:jar:2.2.0:compile
+[INFO] |  |     |     \- org.apache.hadoop:hadoop-mapreduce-client-shuffle:jar:2.2.0:compile
+[INFO] |  |     |        \- org.apache.hadoop:hadoop-yarn-server-nodemanager:jar:2.2.0:compile
+[INFO] |  |     \- org.apache.solr:solr-solrj:jar:4.0.0:compile
+[INFO] |  |        \- org.codehaus.woodstox:wstx-asl:jar:3.2.7:runtime
+[INFO] |  +- com.dajie:dj-infra-guide-api:jar:0.0.24:compile
+[INFO] |  |  \- com.dajie:dj-common-file:jar:3.2.0:compile
+[INFO] |  |     \- org.apache.httpcomponents:httpmime:jar:4.2.2:compile
+[INFO] |  +- com.dajie:dj-infra-guide-client:jar:0.0.09:compile
+[INFO] |  +- com.dajie:dj-framework-cluster-cache:jar:1.0.20:compile
+[INFO] |  |  +- javax.cache:cache-api:jar:0.5:compile
+[INFO] |  |  +- javax.transaction:jta:jar:1.1:compile
+[INFO] |  |  +- org.apache.commons:commons-pool2:jar:2.3:compile
+[INFO] |  |  \- ognl:ognl:jar:3.0.3:compile
+[INFO] |  +- com.dajie:dj-antispam-api:jar:1.0.1:compile
+[INFO] |  |  +- joda-time:joda-time:jar:1.6:compile
+[INFO] |  |  +- org.apache.commons:commons-collections4:jar:4.0:compile
+[INFO] |  |  \- com.dajie:dj-wordfilter-api:jar:1.0.5:compile
+[INFO] |  +- com.dajie:dj-antispam-client:jar:1.0.1:compile
+[INFO] |  \- com.dajie:dj-search-user-thrift:jar:0.1.6:compile (version managed from 0.1.5)
+[INFO] |     \- com.dajie:dj-search-query-api:jar:1.2.47:compile (version managed from 0.0.1)
+[INFO] +- com.dajie:dj-common-framework:jar:3.1.0:compile
+[INFO] |  +- com.dajie:dj-web-util:jar:4.0.00:compile
+[INFO] |  +- com.dajie:dj-common-ibatis:jar:3.2.03:compile
+[INFO] |  |  +- com.dajie:dj-framework-config-datasource:jar:1.0.02:compile
+[INFO] |  |  +- com.dajie:ibatis:jar:1.0:compile
+[INFO] |  |  +- com.jolbox:bonecp:jar:0.7.1.RELEASE:compile
+[INFO] |  |  \- mysql:mysql-connector-java:jar:5.1.17:compile
+[INFO] |  +- com.dajie:dj-common-guice:jar:2.0.3:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- com.opensymphony:xwork-core:jar:2.1.6:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:2.0.2:compile (version managed from 1.0.b2)
+[INFO] |  +- net.spy:memcached:jar:2.5:compile
+[INFO] |  \- opensymphony:oscache:jar:2.4.1:compile
+[INFO] |     \- javax.jms:jms:jar:1.1:compile
+[INFO] +- com.dajie:dj-job-v2-api:jar:2.0.0:compile
+[INFO] +- com.dajie:dj-reg-api:jar:2.0.7:compile
+[INFO] +- com.dajie:dj-reg-client:jar:2.0.0:compile
+[INFO] |  +- org.springframework:spring-test:jar:4.2.0.RELEASE:compile
+[INFO] |  \- org.springframework:spring-jdbc:jar:4.2.0.RELEASE:compile
+[INFO] +- com.dajie:dj-corp-api:jar:3.2.4:compile
+[INFO] |  +- com.dajie:dj-corp-model:jar:2.3.1:compile
+[INFO] |  |  \- com.dajie:dj-base-kestrel:jar:1.0.0:compile
+[INFO] |  +- net.sourceforge.pinyin4j:pinyin4j:jar:2.5.0:compile
+[INFO] |  +- com.dajie:dj-job-model:jar:2.7.21:compile
+[INFO] |  |  +- com.dajie:dj-job-talent-api:jar:3.0.22:compile
+[INFO] |  |  +- com.dajie:dj-job-apply-api:jar:1.0.6:compile
+[INFO] |  |  |  \- com.dajie:dj-resume-api:jar:1.2.2:compile
+[INFO] |  |  +- com.dajie:dj-deprecated-cache:jar:1.0.0:compile
+[INFO] |  |  \- com.dajie:dj-infra-user-model:jar:2.2.0:compile
+[INFO] |  |     \- com.dajie:dj-infra-user-api:jar:2.1.17:compile (version managed from 2.1.05)
+[INFO] |  +- com.dajie:dj-pt-job-api:jar:1.1.33:compile
+[INFO] |  \- com.dajie:dj-ask-api:jar:2.3.9:compile
+[INFO] |     +- com.dajie:dj-at-api:jar:2.0.00:compile
+[INFO] |     \- com.dajie:dj-at-client:jar:2.0.00:compile
+[INFO] |        +- com.dajie:dj-infra-user-client:jar:2.1.02:compile
+[INFO] |        \- com.dajie:dj-common-global:jar:3.0.2:compile
+[INFO] +- com.dajie:dj-corp-client:jar:3.0.12:compile
+[INFO] +- com.dajie:dj-job-v2-client:jar:2.0.0:compile
+[INFO] +- com.dajie:dj-dictionary-client:jar:1.0.10:compile
+[INFO] |  +- com.google.inject:guice:jar:2.0:compile
+[INFO] |  +- jaxen:jaxen:jar:1.1.1:compile
+[INFO] |  |  +- jdom:jdom:jar:1.0:compile
+[INFO] |  |  +- xerces:xercesImpl:jar:2.6.2:compile
+[INFO] |  |  \- xom:xom:jar:1.0:compile
+[INFO] |  |     +- xerces:xmlParserAPIs:jar:2.6.2:compile
+[INFO] |  |     +- xalan:xalan:jar:2.6.0:compile
+[INFO] |  |     \- com.ibm.icu:icu4j:jar:4.8.1.1:compile (version managed from 2.6.1)
+[INFO] |  \- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2:compile
+[INFO] |     \- org.codehaus.jackson:jackson-core-asl:jar:1.9.2:compile (version managed from 1.8.8)
+[INFO] +- com.dajie:dj-dictionary-api:jar:1.0.8:compile
+[INFO] +- com.dajie:dj-mobile-api:jar:1.0.1:compile
+[INFO] +- com.dajie:dj-mobile-client:jar:1.0.1:compile
+[INFO] +- com.dajie:dj-job-v2-view:jar:1.0.1:compile
+[INFO] |  +- com.dajie:dj-common-dictionary:jar:3.0.2:compile
+[INFO] |  \- org.projectlombok:lombok:jar:1.16.4:compile
+[INFO] +- com.dajie:dj-common-weixin:jar:2.0.2:compile
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:3.1:compile
+[INFO] |  +- org.json:json:jar:20090211:compile
+[INFO] |  \- org.freemarker:freemarker:jar:2.3.19:compile
+[INFO] +- com.dajie:dj-weixin-xiaozhaoji-api:jar:2.0.19:compile
+[INFO] |  +- com.dajie:dj-atsteam-util:jar:2.0.9:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:3.0.5.RELEASE:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.0.0.GA:compile
+[INFO] |  |  +- javax.servlet:jstl:jar:1.2:compile
+[INFO] |  |  +- org.hibernate:hibernate-validator:jar:4.3.0.Final:compile
+[INFO] |  |  |  \- org.jboss.logging:jboss-logging:jar:3.1.0.CR2:compile
+[INFO] |  |  \- org.springframework.batch:spring-batch-core:jar:2.1.9.RELEASE:compile
+[INFO] |  |     +- org.springframework.batch:spring-batch-infrastructure:jar:2.1.9.RELEASE:compile
+[INFO] |  |     \- org.codehaus.jettison:jettison:jar:1.1:compile
+[INFO] |  \- com.dajie:dj-corp-weixin-api:jar:2.0.7:compile
+[INFO] |     \- commons-io:commons-io:jar:2.4:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-core:jar:2.5.1:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.5.1:compile
+[INFO] +- com.dajie:dj-mq-monitor-api:jar:1.0.1-SNAPSHOT:compile
+[INFO] \- com.dajie:dj-mq-monitor-client:jar:1.0.0:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.010s
+[INFO] Finished at: Fri Nov 25 19:16:57 CST 2016
+[INFO] Final Memory: 44M/738M
+[INFO] ------------------------------------------------------------------------

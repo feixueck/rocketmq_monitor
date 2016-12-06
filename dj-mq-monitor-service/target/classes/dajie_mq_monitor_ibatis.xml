@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="lazyLoadingEnabled" value="false"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="BONECP" type="com.dajie.common.framework.ibatis.datasource.BoneCPDataSourceFactory"/>
+    </typeAliases>
+    <typeHandlers>
+        <typeHandler javaType="com.dajie.mq.monitor.enums.MQUserType"
+                     handler="com.dajie.mq.monitor.dao.impl.handler.MQUserTypeHandler"/>
+    </typeHandlers>
+    <plugins>
+        <plugin interceptor="com.dajie.common.framework.ibatis.plugin.QueryInterceptor"/>
+    </plugins>
+    <environments default="core_master">
+        <environment id="core_master">
+            <transactionManager type="JDBC"/>
+            <dataSource type="BONECP">
+                <property name="configNodeName" value="db_config"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/dajie/mq/monitor/dao/impl/MQProviderMapper.xml"/>
+        <mapper resource="com/dajie/mq/monitor/dao/impl/MQConsumerMapper.xml"/>
+    </mappers>
+</configuration>

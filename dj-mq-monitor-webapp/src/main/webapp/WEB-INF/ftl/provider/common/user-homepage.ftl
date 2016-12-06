@@ -1,0 +1,1 @@
+<#function UserHomePage uid><#return "http://${configs['domains.www']}/profile/${uid}"/></#function>

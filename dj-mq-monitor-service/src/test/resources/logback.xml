@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" >
+    <property name="log.level" value="${log.level:-INFO}"/>
+    <property name="log.dir" value="${log.dir:-logs}"/>
+    <property name="bufferedIO" value="false"/>
+    <property name="immediateFlush" value="true"/>
+    <property name="encoding" value="UTF-8"/>
+    <property name="append" value="true"/>
+    <!-- 日志文件名 -->
+    <property name="logFileName" value="dj-mq-monitor-provider" />
+    <property name="normal-pattern" value="%d{yyyy-MM-dd.HH:mm:ss.SSS} [%thread] %-5level %logger{10}.%M:%L  %msg%n"/>
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- 具体的日志配置 -->
+    <logger name="com.jolbox.bonecp">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.springframework">
+        <level value="ERROR"/>
+    </logger>
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

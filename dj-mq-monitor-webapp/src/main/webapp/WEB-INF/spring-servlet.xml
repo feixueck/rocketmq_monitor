@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+>
+    <context:component-scan base-package="com.dajie.mq.monitor"/>
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/js/**" location="/resource/js/" />
+    <mvc:resources mapping="/css/**" location="/resource/css/" />
+    <mvc:interceptors>
+        <bean class="com.dajie.base.spring.interceptor.BaseInterceptor"/>
+    </mvc:interceptors>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="com.dajie.base.spring.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>application/json;text/javascript;text/html;charset=UTF-8</value>
+                        </list>
+                    </property>
+                    <property name="writeAcceptCharset" value="false"/>
+                </bean>
+                <bean id="jacksonMessageConverter"
+                      class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+                <bean class="com.dajie.common.framework.spring.converter.FreemarkerBasedAjaxModelJSONHttpMessageConverter">
+                    <property name="prefix" value="/WEB-INF/ftl/"/>
+                    <property name="suffix" value=".ftl"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="freemarkerConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:freemarker.properties"/>
+    </bean>
+
+    <bean id="freemarkerConfig"
+          class="com.dajie.common.framework.spring.freemarker.CustomerFreemarkerConfigurationWithEscape">
+        <property name="templateLoaderPath" value=""/>
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="freemarkerSettings" ref="freemarkerConfiguration"/>
+        <property name="sharedVariables">
+            <map>
+                <entry key="url">
+                    <bean class="com.dajie.common.framework.taglib.ui.UrlDirective"/>
+                </entry>
+                <entry key="hashUrl">
+                    <bean class="com.dajie.common.framework.taglib.ui.HashUrlDirective"/>
+                </entry>
+                <entry key="button">
+                    <bean class="com.dajie.common.framework.taglib.ui.ButtonDirective"/>
+                </entry>
+                <entry key="tabs">
+                    <bean class="com.dajie.common.framework.taglib.ui.TabsDirective"/>
+                </entry>
+                <entry key="pager">
+                    <bean class="com.dajie.common.framework.taglib.ui.PaginationDirective"/>
+                </entry>
+                <entry key="validate">
+                    <bean class="com.dajie.common.framework.taglib.util.ValidateDirective"/>
+                </entry>
+                <entry key="confirm">
+                    <bean class="com.dajie.common.framework.taglib.ui.ConfirmDirective"/>
+                </entry>
+                <entry key="holder">
+                    <bean class="com.dajie.common.framework.taglib.util.HolderDirective"/>
+                </entry>
+                <entry key="sprite">
+                    <bean class="com.dajie.common.framework.taglib.ui.SpriteDirective"/>
+                </entry>
+                <entry key="require">
+                    <bean class="com.dajie.common.framework.taglib.util.RequireDirective"/>
+                </entry>
+                <entry key="editor">
+                    <bean class="com.dajie.common.framework.taglib.util.EditorDirective"/>
+                </entry>
+                <entry key="customPager">
+                    <bean class="com.dajie.common.framework.taglib.ui.CustomPaginationDirective"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="freemarkerViewResolver"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="com.dajie.common.framework.spring.freemarker.CustomerFreeMarkerView"/>
+        <property name="cache" value="false"/>
+        <property name="prefix" value="/WEB-INF/ftl/"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+    </bean>
+
+    <bean id="exceptionResolver" class="com.dajie.common.framework.spring.handler.SimpleMappingExceptionResolver">
+        <property name="defaultStatusCode" value="500"/>
+        <property name="defaultErrorView" value="common/500"/>
+        <property name="exceptionMappings">
+            <props>
+                <prop key="org.springframework.validation.BindException">common/404</prop>
+                <prop key="org.springframework.web.HttpRequestMethodNotSupportedException">common/404</prop>
+                <prop key="org.springframework.web.bind.MissingServletRequestParameterException">common/404</prop>
+                <prop key="com.dajie.common.framework.spring.exception.ResourceNotFoundException">common/404</prop>
+                <prop key="org.springframework.beans.TypeMismatchException">common/404</prop>
+            </props>
+        </property>
+        <property name="statusCodes">
+            <props>
+                <prop key="common/404">404</prop>
+                <prop key="common/500">500</prop>
+            </props>
+        </property>
+        <property name="view2log">
+            <set>
+                <value>common/500</value>
+            </set>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd" >
+<mapper namespace="com.dajie.mq.monitor.dao.MQProviderDao">
+    <resultMap id="result_map" type="com.dajie.mq.monitor.model.MQInfoDetail">
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="ip" property="ip" jdbcType="VARCHAR"/>
+        <result column="app_name" property="appName" jdbcType="VARCHAR"/>
+        <result column="topic_name" property="topicName" jdbcType="VARCHAR"/>
+        <result column="pid" property="pid" jdbcType="VARCHAR"/>
+        <result column="app_desc" property="appDesc" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="column_list">
+        id,ip,app_name,topic_name, pid,app_desc,create_date,update_date
+    </sql>
+    <insert id="insertProvicer" parameterType="com.dajie.mq.monitor.model.MQInfoDetail">
+         insert ignore into tb_mq_provider(ip,app_name,topic_name, pid,app_desc,create_date)
+         values
+        (#{ip,jdbcType=VARCHAR},
+        #{appName,jdbcType=VARCHAR},
+        #{topicName,jdbcType=VARCHAR},
+        #{pid, jdbcType=VARCHAR},
+        #{appDesc, jdbcType=VARCHAR},
+        now())
+     </insert>
+
+    <select id="select" parameterType="java.util.Map" resultMap="result_map">
+        select <include refid="column_list"/>
+        from tb_mq_provider order by id asc limit #{offset,jdbcType=INTEGER}, #{limit,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectTotalCount" resultType="java.lang.Integer">
+        select count(1)
+        from tb_mq_provider
+    </select>
+    
+    <delete id="delete" parameterType="java.util.Map">
+        delete from tb_mq_provider where app_name=#{appName, jdbcType=VARCHAR} and topic_name=#{topicName, jdbcType=VARCHAR}
+    </delete>
+    
+    <select id="selectTopic"  resultType="java.lang.String">
+        select DISTINCT topic_name from tb_mq_provider
+    </select>
+    
+    <select id="selectByTopicName" parameterType="java.util.Map" resultMap="result_map">
+        select <include refid="column_list"/>
+        from tb_mq_provider where topic_name=#{topicName, jdbcType=VARCHAR} order by id asc
+    </select>
+</mapper>

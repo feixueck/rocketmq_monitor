@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 设置dubbo服务超时时间为10秒, 线程池为300 -->
+    <dubbo:provider timeout="10000" dispatcher="all" threadpool="fixed" threads="300"/>
+
+    <dubbo:service interface="com.dajie.mq.monitor.service.MQProviderService" ref="mqProviderService"/>
+    <dubbo:service interface="com.dajie.mq.monitor.service.MQConsumerService" ref="mqConsumerService"/>
+    <dubbo:service interface="com.dajie.mq.monitor.service.MQTopicService" ref="mqTopicService"/>
+</beans>
