@@ -14,5 +14,9 @@ Why I developed this kind if project?</br>
   When we exchange data with others, the normal RocketMQ model like this:</br>
   <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/mq_model.png">
   
-
-
+  In ideal conditions, when provider put message to the MQ, the message can be consumed by the consumer. However, developers always make some mistakes unconsciously. Think about what happened in the following model:
+  
+   <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/mq_model_secret.png">
+   
+   Forstly, when the provider try to add m2 to the MQ, there must be some ERROR occures, this kind of mistake can be easily detacted.
+   Secondly, how can I know if the consumer_1 secretly consume my message?
