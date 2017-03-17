@@ -23,7 +23,7 @@ Why I developed this kind if project?</br>
    This project is aimed at solving the second and the third problems listed above.
    
    ### Tracking all the consumers and providers of a specific Message Queue.
-   In this project, I collected all the information of the providers and consumers when a topic was first built in the MQ jar, put all the data in a node of zookeeper, because I want the MQ jar depends on some light weight jar files. Then start a Dubbo Service to listen the change of the data in the node of zookeeper, when some changes are found, update the data in database. In the final end, I start a client read the data in Databese to show all the messages in this system.
+   In this project, I collected all the information of the providers and consumers when a topic was first built in the MQ jar, put all the data in a node of zookeeper, because I want the MQ jar depends on some light weight jar files. Then start a Dubbo Service to listen the change of the data in the node of zookeeper, when some changes are found, update the data in database. In the final end, I start a client read the data in Databese to show all the messages in this system.
    The work process like the following graph:</br>
    <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/work%20process%20of%20monitor.png"></br>
    
