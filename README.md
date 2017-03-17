@@ -29,3 +29,7 @@ Why I developed this kind if project?</br>
    
    As we finally persist all the data in Database, it's earier for us to supervise all the changes of queues in the system. In the same way, if we want to know the consumers/providers of the provider/consumer, that is also very simple.
    
+## How to use it?
+Step1: Add one node of zookeeper names "mq_monitor"
+Step2: Add two tables in Database according to these two mappers in the project: MQConsumerMapper.xml and MQProviderMapper.xml
+Step3: Deploy the client:dj-mq-monitor-webapp
