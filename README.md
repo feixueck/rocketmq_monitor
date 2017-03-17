@@ -11,4 +11,8 @@ Why I developed this kind if project?</br>
   which is not urgent necessary. we can put the data into MQ firstly, and then consume it slowly.</br>
   (3) Platform independence data interaction. When we need to get data from other non-java departments, we use MQ to as a transmiting tool.
   ### What this project can help us do?
-  When we exchange data with others, the RocketMQ model like this:
+  When we exchange data with others, the normal RocketMQ model like this:</br>
+  <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/mq_model.png">
+  
+
+
