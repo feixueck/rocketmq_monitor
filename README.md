@@ -29,5 +29,5 @@ Why I developed this kind if project?</br>
    The work process like the following graph:</br>
    <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/work%20process%20of%20monitor.png"></br>
    
-   As we finally persist all the data in Database, it's earier for us to supervise all the changes of queues in the system. In the same way, if we want to know the consumers/providers of the provider/consumer, that is also ver simple.
+   As we finally persist all the data in Database, it's earier for us to supervise all the changes of queues in the system. In the same way, if we want to know the consumers/providers of the provider/consumer, that is also very simple.
    
