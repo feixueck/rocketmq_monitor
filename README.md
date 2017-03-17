@@ -1,5 +1,5 @@
 ## Synopsis
-This is a monitor of the RocketMQ tool. That is by using this kind of tool we can easily find all the information of consumers and providers of a specific Message Queue.
+This is a monitor of the RocketMQ tool. That is by using this kind of tool we can easily find all the information of consumers and providers of a specific Message Queue. Meanwhile, we can simply track the information of providers/consumers through a specific consumer/provider.
 
 ## Motivation
 Why I developed this kind if project?</br>
@@ -19,7 +19,7 @@ Why I developed this kind if project?</br>
    <img width=500 height=400 src="https://github.com/hitynsun/docs/blob/master/images/mq_model_secret.png"></br>
    Firstly, when the provider try to add m2 to the MQ, there must be some ERROR occures, this kind of mistake can be easily detacted.</br>
    Secondly, how can we know if the consumer_1 secretly consume my message? Especially in distributed systems, it becomes much harder, because we don't know which computer the process in, the process number, we even don't know who is the owner of this process.</br>
-   Thridly, how can we know the information of all providers from consumers? How can we know the information of all consumers from a provider?<br>
+   Thridly, how can we know the information of all providers through consumers? How can we know the information of all consumers through a provider?<br>
    This project is aimed at solving the second and the third problems listed above.
    
    ### Tracking all the consumers and providers of a specific Message Queue.
